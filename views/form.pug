@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Add a message to the mini message board.
+  form(method="POST" action="/new")
+    label(for="author") Author
+    input(id="author" name="author" type="text" required)
+    label(for="message") Message
+    input(id="message" name="message" type="text" required)
+    button(type="submit") Submit
